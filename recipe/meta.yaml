@@ -1,5 +1,4 @@
 {% set version = '1.0-2' %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -16,7 +15,8 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 0
+  number: 1
+  skip: true  # [win32]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -67,3 +67,4 @@ extra:
     - daler
     - jdblischak
     - cbrueffer
+    - dbast
